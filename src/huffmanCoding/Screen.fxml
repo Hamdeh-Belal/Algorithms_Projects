@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="huffmanCoding.ScreenController">
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="compTab" text="Compress">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="dropPane" onDragDropped="#DropFileFinal" onDragOver="#DropFile" prefHeight="82.0" prefWidth="108.0">
+                           <children>
+                              <Label layoutX="15.0" layoutY="6.0" text="Drop files here">
+                                 <font>
+                                    <Font name="Times New Roman Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="49.0" fitWidth="54.0" layoutX="24.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="C:\BelalWorkSpace\Algorithms_Course_Projects\src\huffmanCoding\dropImage.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="exploerPane" layoutX="108.0" onMouseClicked="#ExplorFile" prefHeight="82.0" prefWidth="108.0">
+                           <children>
+                              <Label layoutX="7.0" layoutY="5.0" text="Explore Files ">
+                                 <font>
+                                    <Font name="Times New Roman Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="49.0" fitWidth="54.0" layoutX="30.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="C:\BelalWorkSpace\Algorithms_Course_Projects\src\huffmanCoding\explorFile.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <ImageView fx:id="startImage" fitHeight="60.0" fitWidth="56.0" layoutX="300.0" layoutY="13.0" onMouseClicked="#Strating" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="C:\BelalWorkSpace\Algorithms_Course_Projects\src\huffmanCoding\startImage.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="statImage" fitHeight="27.0" fitWidth="49.0" layoutX="379.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="C:\BelalWorkSpace\Algorithms_Course_Projects\src\huffmanCoding\redImage.png" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="tableView" layoutX="318.0" layoutY="161.0" prefHeight="289.0" prefWidth="280.0" visible="false">
+                          <columns>
+                            <TableColumn prefWidth="84.79998779296875" text="Byte" />
+                            <TableColumn prefWidth="109.60003662109375" text="Huffman Code" />
+                              <TableColumn prefWidth="85.5999755859375" text="Frequency" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="headerBt" layoutX="26.0" layoutY="115.0" mnemonicParsing="false" onAction="#ShowHeader" style="-fx-background-color: #E6E6FA;" text="Header" visible="false" />
+                        <Label fx:id="headerTxt" layoutX="21.0" layoutY="161.0" prefHeight="267.0" prefWidth="282.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 3px;" visible="false" wrapText="true" />
+                        <Button fx:id="tableBt" layoutX="108.0" layoutY="115.0" mnemonicParsing="false" onAction="#showTable" style="-fx-background-color: #E6E6FA;" text="Table" visible="false" />
+                        <Label fx:id="infoImage" layoutX="379.0" layoutY="60.0" prefHeight="82.0" prefWidth="207.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 3px;" visible="false" wrapText="true" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="compTab1" text="Decompress">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="dropPane_De" onDragDropped="#DropFile_DeFinal" onDragOver="#DropFile_De" prefHeight="82.0" prefWidth="108.0">
+                           <children>
+                              <Label layoutX="15.0" layoutY="6.0" text="Drop files here">
+                                 <font>
+                                    <Font name="Times New Roman Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="49.0" fitWidth="54.0" layoutX="24.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="C:\BelalWorkSpace\Algorithms_Course_Projects\src\huffmanCoding\dropImage.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="exploerPane_De" layoutX="108.0" onMouseClicked="#ExplorFile_De" prefHeight="82.0" prefWidth="108.0">
+                           <children>
+                              <Label layoutX="7.0" layoutY="5.0" text="Explore Files ">
+                                 <font>
+                                    <Font name="Times New Roman Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="49.0" fitWidth="54.0" layoutX="30.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="C:\BelalWorkSpace\Algorithms_Course_Projects\src\huffmanCoding\explorFile.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <ImageView fx:id="startImage_De" fitHeight="60.0" fitWidth="56.0" layoutX="300.0" layoutY="13.0" onMouseClicked="#Strating_De" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="C:\BelalWorkSpace\Algorithms_Course_Projects\src\huffmanCoding\startImage.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="statImage_De" fitHeight="27.0" fitWidth="49.0" layoutX="379.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="C:\BelalWorkSpace\Algorithms_Course_Projects\src\huffmanCoding\redImage.png" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="tableView_De" layoutX="318.0" layoutY="161.0" prefHeight="289.0" prefWidth="280.0" visible="false">
+                           <columns>
+                              <TableColumn prefWidth="135.20001220703125" text="Byte" />
+                              <TableColumn prefWidth="144.800048828125" text="Huffman Code" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="headerBt_De" layoutX="26.0" layoutY="115.0" mnemonicParsing="false" onAction="#ShowHeader_De" style="-fx-background-color: #E6E6FA;" text="Header" visible="false" />
+                        <Label fx:id="headerTxt_De" layoutX="21.0" layoutY="161.0" prefHeight="267.0" prefWidth="282.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 3px;" visible="false" wrapText="true" />
+                        <Button fx:id="tableBt_De" layoutX="108.0" layoutY="115.0" mnemonicParsing="false" onAction="#showTable_De" style="-fx-background-color: #E6E6FA;" text="Table" visible="false" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <top>
+      <HBox prefHeight="76.0" prefWidth="600.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="82.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="C:\BelalWorkSpace\Algorithms_Course_Projects\src\huffmanCoding\compressingImage.png" />
+               </image>
+            </ImageView>
+            <Label text="Huffman Code Project">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
